@@ -1,4 +1,4 @@
-import "../styles/jarvis.css";
+import "../styles/Jarvis.css";
 
 
 function Jarvis() {
