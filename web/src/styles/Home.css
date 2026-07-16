@@ -1,0 +1,516 @@
+/* =====================================
+   PANDA TECH HOME SYSTEM
+===================================== */
+
+
+.home {
+
+  min-height:100vh;
+
+  padding:140px 8% 100px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:80px;
+
+}
+
+
+
+
+/* CONTENIDO */
+
+.home-content {
+
+  max-width:650px;
+
+}
+
+
+
+
+.hero-badge {
+
+  display:inline-block;
+
+  padding:10px 20px;
+
+  border-radius:50px;
+
+  background:rgba(139,92,246,.15);
+
+  border:1px solid rgba(139,92,246,.35);
+
+  color:#c4b5fd;
+
+  margin-bottom:30px;
+
+}
+
+
+
+
+
+.home h1 {
+
+  font-size:clamp(70px,9vw,120px);
+
+  line-height:.95;
+
+  letter-spacing:-6px;
+
+  margin-bottom:20px;
+
+}
+
+
+
+
+
+.home h1 span {
+
+  color:#8b5cf6;
+
+}
+
+
+
+
+
+.home h2 {
+
+  font-size:32px;
+
+  margin-bottom:25px;
+
+}
+
+
+
+
+
+.home p {
+
+  color:#a1a1aa;
+
+  font-size:20px;
+
+  line-height:1.7;
+
+  margin-bottom:45px;
+
+}
+
+
+
+
+
+
+
+/* BOTONES */
+
+
+.buttons {
+
+  display:flex;
+
+  gap:20px;
+
+}
+
+
+
+
+
+.buttons button {
+
+  padding:16px 35px;
+
+}
+
+
+
+
+
+.primary-btn {
+
+  background:#8b5cf6;
+
+  border:none;
+
+}
+
+
+
+
+
+.secondary-btn {
+
+  background:transparent;
+
+  border:1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+
+
+
+
+/* STATS */
+
+
+.hero-stats {
+
+  display:flex;
+
+  gap:50px;
+
+  margin-top:70px;
+
+}
+
+
+
+
+
+.hero-stats div {
+
+  text-align:left;
+
+}
+
+
+
+
+
+.hero-stats h3 {
+
+  font-size:40px;
+
+  margin-bottom:5px;
+
+}
+
+
+
+
+
+.hero-stats span {
+
+  color:#a1a1aa;
+
+}
+
+
+
+
+
+
+
+
+/* INTERFAZ */
+
+
+.hero-interface {
+
+
+  animation:float 5s ease-in-out infinite;
+
+
+}
+
+
+
+
+
+.optimizer-preview {
+
+
+  width:450px;
+
+  padding:30px;
+
+  border-radius:30px;
+
+
+  background:rgba(255,255,255,.05);
+
+
+  border:1px solid rgba(255,255,255,.12);
+
+
+  backdrop-filter:blur(25px);
+
+
+  box-shadow:
+
+  0 0 80px rgba(139,92,246,.25);
+
+
+}
+
+
+
+
+
+
+
+.preview-header {
+
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:35px;
+
+
+}
+
+
+
+
+
+.preview-header small {
+
+
+  color:#a1a1aa;
+
+
+}
+
+
+
+
+
+
+
+.preview-health {
+
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+
+}
+
+
+
+
+
+.preview-health p {
+
+
+  margin:0;
+
+  font-size:15px;
+
+
+}
+
+
+
+
+
+.preview-health strong {
+
+
+  font-size:50px;
+
+  color:#8b5cf6;
+
+
+}
+
+
+
+
+
+
+
+
+.preview-bar {
+
+
+  width:100%;
+
+  height:12px;
+
+  background:rgba(255,255,255,.1);
+
+  border-radius:20px;
+
+  margin:25px 0 35px;
+
+  overflow:hidden;
+
+
+}
+
+
+
+
+
+.preview-bar span {
+
+
+  display:block;
+
+  width:98%;
+
+  height:100%;
+
+  background:#8b5cf6;
+
+  border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+.preview-info {
+
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:15px;
+
+
+}
+
+
+
+
+
+
+.preview-info div {
+
+
+  padding:20px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,.05);
+
+
+}
+
+
+
+.preview-info small {
+
+
+  display:block;
+
+  color:#a1a1aa;
+
+  margin-bottom:10px;
+
+
+}
+
+
+
+.preview-info b {
+
+
+  font-size:25px;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:1100px){
+
+
+.home {
+
+  flex-direction:column;
+
+  text-align:center;
+
+}
+
+
+
+.hero-stats {
+
+  justify-content:center;
+
+}
+
+
+
+.optimizer-preview {
+
+  width:100%;
+
+}
+
+
+
+.buttons {
+
+  justify-content:center;
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+.home h1 {
+
+  font-size:60px;
+
+}
+
+
+
+.hero-stats {
+
+  flex-direction:column;
+
+  gap:25px;
+
+}
+
+
+
+.preview-info {
+
+  grid-template-columns:1fr;
+
+}
+
+
+
+}

@@ -1,0 +1,192 @@
+/* =========================
+   PANDA TECH ANIMATIONS
+========================= */
+
+
+.fade-in {
+
+  animation: fadeIn .8s ease forwards;
+
+}
+
+
+
+
+.fade-up {
+
+  animation: fadeUp .8s ease forwards;
+
+}
+
+
+
+
+.float {
+
+  animation: float 4s ease-in-out infinite;
+
+}
+
+
+
+
+.pulse {
+
+  animation: pulse 2s infinite;
+
+}
+
+
+
+
+.glow {
+
+  animation: glow 3s ease-in-out infinite;
+
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+
+
+  from {
+
+    opacity:0;
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+  }
+
+
+}
+
+
+
+
+
+
+@keyframes fadeUp {
+
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+
+}
+
+
+
+
+
+
+@keyframes float {
+
+
+  0% {
+
+    transform:translateY(0);
+
+  }
+
+
+  50% {
+
+    transform:translateY(-10px);
+
+  }
+
+
+  100% {
+
+    transform:translateY(0);
+
+  }
+
+
+}
+
+
+
+
+
+
+@keyframes pulse {
+
+
+  0% {
+
+    opacity:1;
+
+  }
+
+
+  50% {
+
+    opacity:.5;
+
+  }
+
+
+  100% {
+
+    opacity:1;
+
+  }
+
+
+}
+
+
+
+
+
+
+@keyframes glow {
+
+
+  0% {
+
+    filter:drop-shadow(0 0 0px #8b5cf6);
+
+  }
+
+
+  50% {
+
+    filter:drop-shadow(0 0 15px #8b5cf6);
+
+  }
+
+
+  100% {
+
+    filter:drop-shadow(0 0 0px #8b5cf6);
+
+  }
+
+
+}

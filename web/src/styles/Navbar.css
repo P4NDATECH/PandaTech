@@ -1,0 +1,262 @@
+/* =====================================
+   PANDA TECH NAVBAR SYSTEM
+===================================== */
+
+
+.navbar {
+
+  position:fixed;
+
+  top:18px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:86%;
+
+  padding:16px 32px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  background:rgba(10,10,10,.65);
+
+  backdrop-filter:blur(25px);
+
+  -webkit-backdrop-filter:blur(25px);
+
+  border:1px solid rgba(255,255,255,.1);
+
+  border-radius:25px;
+
+  z-index:999;
+
+  box-shadow:
+
+  0 20px 50px rgba(0,0,0,.45);
+
+}
+
+
+
+
+/* BRAND */
+
+
+.brand {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  font-size:24px;
+
+  font-weight:800;
+
+}
+
+
+
+.brand span {
+
+  color:white;
+
+}
+
+
+
+.logo {
+
+  width:42px;
+
+  height:42px;
+
+  object-fit:contain;
+
+  filter:
+  drop-shadow(0 0 15px rgba(139,92,246,.7));
+
+}
+
+
+
+
+
+
+/* LINKS */
+
+
+.links {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:28px;
+
+}
+
+
+
+.links a {
+
+  position:relative;
+
+  color:#a1a1aa;
+
+  font-weight:500;
+
+  transition:.3s;
+
+}
+
+
+
+.links a:hover {
+
+  color:white;
+
+}
+
+
+
+
+
+.links a::after {
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-8px;
+
+  left:50%;
+
+  width:0;
+
+  height:2px;
+
+  background:#8b5cf6;
+
+  transform:translateX(-50%);
+
+  transition:.3s;
+
+}
+
+
+
+
+
+.links a.active {
+
+  color:white;
+
+}
+
+
+
+.links a.active::after {
+
+  width:100%;
+
+}
+
+
+
+
+
+
+
+
+/* COMUNIDAD */
+
+
+.community {
+
+  padding:10px 18px;
+
+  border-radius:50px;
+
+  background:#8b5cf6;
+
+  color:white !important;
+
+  box-shadow:
+
+  0 0 25px rgba(139,92,246,.35);
+
+  transition:.3s;
+
+}
+
+
+
+.community:hover {
+
+  transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:1000px){
+
+
+.navbar {
+
+  width:92%;
+
+}
+
+
+
+.links {
+
+  gap:15px;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:750px){
+
+
+.navbar {
+
+  flex-direction:column;
+
+  gap:15px;
+
+}
+
+
+
+.links {
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+}
+
+
+}

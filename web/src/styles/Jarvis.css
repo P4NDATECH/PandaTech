@@ -1,0 +1,485 @@
+/* =====================================
+   PANDA TECH JARVIS AI SYSTEM
+===================================== */
+
+
+.jarvis-page {
+
+  min-height:100vh;
+
+  padding:120px 8% 100px;
+
+  text-align:center;
+
+}
+
+
+
+
+
+.jarvis-hero {
+
+  max-width:900px;
+
+  margin:auto;
+
+}
+
+
+
+
+
+.jarvis-label {
+
+  display:inline-block;
+
+  margin-top:40px;
+
+  padding:10px 20px;
+
+  border-radius:50px;
+
+  color:#c4b5fd;
+
+  background:rgba(139,92,246,.15);
+
+  border:1px solid rgba(139,92,246,.35);
+
+}
+
+
+
+
+
+.jarvis-page h1 {
+
+  font-size:clamp(60px,8vw,110px);
+
+  letter-spacing:-5px;
+
+  margin:25px 0;
+
+}
+
+
+
+
+
+.jarvis-page h1 span {
+
+  color:#8b5cf6;
+
+}
+
+
+
+
+
+.jarvis-hero p {
+
+  max-width:750px;
+
+  margin:auto;
+
+  color:#a1a1aa;
+
+  font-size:20px;
+
+  line-height:1.7;
+
+}
+
+
+
+
+
+
+
+/* CORE IA */
+
+
+.ai-core {
+
+  position:relative;
+
+  width:260px;
+
+  height:260px;
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+
+
+
+
+.core-center {
+
+  width:90px;
+
+  height:90px;
+
+  border-radius:50%;
+
+
+  background:
+  radial-gradient(
+    circle,
+    #ffffff,
+    #8b5cf6 35%,
+    #6d28d9 70%
+  );
+
+
+  box-shadow:
+
+  0 0 40px #8b5cf6,
+  0 0 90px rgba(139,92,246,.7);
+
+
+  z-index:5;
+
+  animation:pulseCore 3s infinite;
+
+}
+
+
+
+
+
+
+@keyframes pulseCore {
+
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+
+}
+
+
+
+
+
+
+.core-ring {
+
+  position:absolute;
+
+  border-radius:50%;
+
+  border:1px solid rgba(139,92,246,.5);
+
+}
+
+
+
+
+
+
+.ring1 {
+
+  width:150px;
+
+  height:150px;
+
+  animation:rotate 8s linear infinite;
+
+}
+
+
+
+.ring2 {
+
+  width:210px;
+
+  height:210px;
+
+  animation:rotate 12s linear infinite reverse;
+
+}
+
+
+
+.ring3 {
+
+  width:260px;
+
+  height:260px;
+
+  animation:rotate 18s linear infinite;
+
+}
+
+
+
+
+
+
+
+@keyframes rotate {
+
+
+from {
+
+transform:rotate(0deg);
+
+}
+
+
+to {
+
+transform:rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* STATUS */
+
+
+.jarvis-status {
+
+  margin-top:120px;
+
+}
+
+
+
+.jarvis-status h2 {
+
+  font-size:45px;
+
+  margin-bottom:40px;
+
+}
+
+
+
+
+
+
+.status-box {
+
+  max-width:600px;
+
+  margin:auto;
+
+  padding:35px;
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,.05);
+
+  border:1pxpx solid rgba(255,255,255,.1);
+
+  backdrop-filter:blur(20px);
+
+}
+
+
+
+
+
+
+.status-box span {
+
+  color:#facc15;
+
+  font-size:20px;
+
+}
+
+
+
+
+
+.progress {
+
+  width:100%;
+
+  height:12px;
+
+  margin:30px 0 15px;
+
+  background:rgba(255,255,255,.1);
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+}
+
+
+
+
+
+.progress-fill {
+
+  width:80%;
+
+  height:100%;
+
+  background:#8b5cf6;
+
+  border-radius:20px;
+
+  box-shadow:0 0 20px rgba(139,92,246,.7);
+
+}
+
+
+
+
+
+
+.status-box small {
+
+  color:#a1a1aa;
+
+}
+
+
+
+
+
+
+
+/* FEATURES */
+
+
+.jarvis-features {
+
+  max-width:1200px;
+
+  margin:100px auto 0;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:25px;
+
+}
+
+
+
+
+
+
+.jarvis-card {
+
+  padding:35px;
+
+  border-radius:25px;
+
+  background:rgba(255,255,255,.05);
+
+  border:1px solid rgba(255,255,255,.1);
+
+  transition:.3s;
+
+}
+
+
+
+
+
+.jarvis-card:hover {
+
+  transform:translateY(-10px);
+
+  border-color:#8b5cf6;
+
+}
+
+
+
+
+
+.jarvis-card span {
+
+  font-size:40px;
+
+}
+
+
+
+
+
+.jarvis-card h3 {
+
+  margin:20px 0;
+
+}
+
+
+
+
+
+.jarvis-card p {
+
+  color:#a1a1aa;
+
+  line-height:1.6;
+
+}
+
+
+
+
+
+
+
+@media(max-width:1000px){
+
+
+.jarvis-features {
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.jarvis-features {
+
+grid-template-columns:1fr;
+
+}
+
+
+}

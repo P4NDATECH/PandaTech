@@ -1,0 +1,499 @@
+/* =====================================
+   PANDA TECH FUTURE BACKGROUND v2
+===================================== */
+
+
+.background-system{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-2;
+
+background:
+
+radial-gradient(
+circle at 50% -20%,
+rgba(139,92,246,.18),
+transparent 40%
+),
+
+#050505;
+
+}
+
+
+
+
+
+/* ==========================
+   AMBIENT GLOWS
+========================== */
+
+
+.ambient-glow{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(140px);
+
+opacity:.45;
+
+}
+
+
+
+
+
+.glow-one{
+
+width:600px;
+
+height:600px;
+
+background:#8b5cf6;
+
+top:-250px;
+
+right:-200px;
+
+animation:moveGlow 20s infinite alternate;
+
+}
+
+
+
+
+
+.glow-two{
+
+width:500px;
+
+height:500px;
+
+background:#4c1d95;
+
+bottom:-220px;
+
+left:-150px;
+
+animation:moveGlow 25s infinite alternate-reverse;
+
+}
+
+
+
+
+
+.glow-three{
+
+width:350px;
+
+height:350px;
+
+background:#c084fc;
+
+top:40%;
+
+left:45%;
+
+opacity:.18;
+
+animation:
+
+pulseGlow 8s infinite;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   TECH GRID
+========================== */
+
+
+.grid-overlay{
+
+
+position:absolute;
+
+
+inset:0;
+
+
+
+background-image:
+
+
+linear-gradient(
+
+rgba(255,255,255,.035) 1px,
+
+transparent 1px
+
+),
+
+
+
+linear-gradient(
+
+90deg,
+
+rgba(255,255,255,.035) 1px,
+
+transparent 1px
+
+);
+
+
+
+background-size:
+
+90px 90px;
+
+
+
+mask-image:
+
+
+radial-gradient(
+
+circle at center,
+
+black,
+
+transparent 75%
+
+);
+
+
+
+opacity:.45;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   PARTICLES
+========================== */
+
+
+.particles span{
+
+
+position:absolute;
+
+
+width:4px;
+
+height:4px;
+
+
+background:#c4b5fd;
+
+
+border-radius:50%;
+
+
+box-shadow:
+
+
+0 0 15px #8b5cf6,
+
+0 0 35px #8b5cf6;
+
+
+
+opacity:.7;
+
+
+animation:
+
+floatParticle linear infinite;
+
+
+}
+
+
+
+
+
+.particles span:nth-child(1){
+
+top:20%;
+left:15%;
+animation-duration:15s;
+
+}
+
+
+
+.particles span:nth-child(2){
+
+top:70%;
+left:25%;
+animation-duration:20s;
+
+}
+
+
+
+.particles span:nth-child(3){
+
+top:40%;
+left:80%;
+animation-duration:18s;
+
+}
+
+
+
+.particles span:nth-child(4){
+
+top:80%;
+left:70%;
+animation-duration:25s;
+
+}
+
+
+
+.particles span:nth-child(5){
+
+top:30%;
+left:50%;
+animation-duration:17s;
+
+}
+
+
+
+.particles span:nth-child(6){
+
+top:60%;
+left:10%;
+animation-duration:22s;
+
+}
+
+
+
+.particles span:nth-child(7){
+
+top:15%;
+left:90%;
+animation-duration:19s;
+
+}
+
+
+
+.particles span:nth-child(8){
+
+top:85%;
+left:45%;
+animation-duration:24s;
+
+}
+
+
+
+.particles span:nth-child(9){
+
+top:50%;
+left:35%;
+animation-duration:21s;
+
+}
+
+
+
+.particles span:nth-child(10){
+
+top:35%;
+left:65%;
+animation-duration:23s;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   SCAN LINES
+========================== */
+
+
+.scan-lines{
+
+
+position:absolute;
+
+
+inset:0;
+
+
+background:
+
+linear-gradient(
+
+rgba(255,255,255,.03) 1px,
+
+transparent 1px
+
+);
+
+
+
+background-size:
+
+100% 5px;
+
+
+
+opacity:.08;
+
+
+animation:
+
+scanMove 8s linear infinite;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+
+@keyframes floatParticle{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+
+50%{
+
+transform:translateY(-90px);
+
+}
+
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+@keyframes moveGlow{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+
+
+to{
+
+transform:translate(100px,80px);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes pulseGlow{
+
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.15;
+
+}
+
+
+
+50%{
+
+transform:scale(1.35);
+
+opacity:.3;
+
+}
+
+
+}
+
+
+
+
+
+@keyframes scanMove{
+
+
+from{
+
+transform:translateY(-20px);
+
+}
+
+
+
+to{
+
+transform:translateY(20px);
+
+}
+
+
+}
