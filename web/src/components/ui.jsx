@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export function Reveal({ children, className = "", delay = 0 }) {
-  return <motion.div className={className} initial={{ opacity: 0, y: 18, filter: "blur(8px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: .65, delay }}>{children}</motion.div>;
+  const reduceMotion = useReducedMotion();
+  return <motion.div className={className} initial={{ opacity: 0, y: reduceMotion ? 0 : 16, filter: reduceMotion ? "none" : "blur(6px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.18 }} transition={{ duration: reduceMotion ? 0 : .58, delay, ease: [0.22, 1, 0.36, 1] }}>{children}</motion.div>;
 }
 
 export function Eyebrow({ children }) { return <span className="eyebrow"><i />{children}</span>; }
@@ -12,5 +13,6 @@ export function SectionHeading({ eyebrow, title, copy, align = "center" }) {
 }
 
 export function Action({ children, secondary = false, className = "", ...props }) {
-  return <motion.button whileTap={{ scale: .97 }} className={`action ${secondary ? "secondary" : ""} ${className}`} {...props}>{children}{!secondary && <ArrowUpRight size={16} />}</motion.button>;
+  const reduceMotion = useReducedMotion();
+  return <motion.button whileHover={reduceMotion ? undefined : { y: -1 }} whileTap={{ scale: .98 }} className={`action ${secondary ? "secondary" : ""} ${className}`} {...props}>{children}{!secondary && <ArrowUpRight size={16} aria-hidden="true" />}</motion.button>;
 }
